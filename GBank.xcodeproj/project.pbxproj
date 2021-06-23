@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		11EBFC972683F2380012563C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFC952683F2380012563C /* LoginViewController.swift */; };
 		11EBFC982683F2380012563C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EBFC962683F2380012563C /* LoginViewController.xib */; };
+		11EBFC9F2683FA000012563C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFC9D2683FA000012563C /* RegisterViewController.swift */; };
+		11EBFCA02683FA000012563C /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EBFC9E2683FA000012563C /* RegisterViewController.xib */; };
 		11ECC9E12683E9AA00C468F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECC9E02683E9AA00C468F3 /* AppDelegate.swift */; };
 		11ECC9E32683E9AA00C468F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECC9E22683E9AA00C468F3 /* SceneDelegate.swift */; };
 		11ECC9EB2683E9AA00C468F3 /* GBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11ECC9E92683E9AA00C468F3 /* GBank.xcdatamodeld */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		11EBFC952683F2380012563C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		11EBFC962683F2380012563C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		11EBFC9D2683FA000012563C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		11EBFC9E2683FA000012563C /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		11ECC9DD2683E9AA00C468F3 /* GBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11ECC9E02683E9AA00C468F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11ECC9E22683E9AA00C468F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 			children = (
 				11EBFC952683F2380012563C /* LoginViewController.swift */,
 				11EBFC962683F2380012563C /* LoginViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11EBFC9C2683F9CC0012563C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11EBFC9D2683FA000012563C /* RegisterViewController.swift */,
+				11EBFC9E2683FA000012563C /* RegisterViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +176,7 @@
 		11ECCA1B2683ECF900C468F3 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				11EBFC9C2683F9CC0012563C /* View */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -291,6 +305,7 @@
 				11ECC9F02683E9AC00C468F3 /* LaunchScreen.storyboard in Resources */,
 				11ECC9ED2683E9AC00C468F3 /* Assets.xcassets in Resources */,
 				11EBFC982683F2380012563C /* LoginViewController.xib in Resources */,
+				11EBFCA02683FA000012563C /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +332,7 @@
 			files = (
 				11EBFC972683F2380012563C /* LoginViewController.swift in Sources */,
 				11ECCA222683EE4700C468F3 /* GSCoordinator.swift in Sources */,
+				11EBFC9F2683FA000012563C /* RegisterViewController.swift in Sources */,
 				11ECC9EB2683E9AA00C468F3 /* GBank.xcdatamodeld in Sources */,
 				11ECCA2A2683EE5400C468F3 /* AppCoordinator.swift in Sources */,
 				11ECC9E12683E9AA00C468F3 /* AppDelegate.swift in Sources */,
