@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="GBank" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="Lws-XN-RlX">
+                    <rect key="frame" x="57" y="76" width="300" height="274"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="od5-3I-ISH">
+                    <rect key="frame" x="145" y="358" width="124" height="55"/>
+                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMG-ja-S8v">
+                    <rect key="frame" x="57" y="477" width="300" height="60"/>
+                    <color key="backgroundColor" red="0.0" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="921-iR-Lsw"/>
+                        <constraint firstAttribute="height" constant="60" id="gNk-c0-zCM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                    <state key="normal" title="Criar conta">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="criarContaPressed:" destination="-1" eventType="touchUpInside" id="TLD-T4-PVA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70r-Rw-Pee">
+                    <rect key="frame" x="57" y="545" width="300" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="JQ9-2o-aKr"/>
+                        <constraint firstAttribute="height" constant="60" id="n0X-hy-eEe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" red="0.0" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loginPressed:" destination="-1" eventType="touchUpInside" id="8z7-jn-7XE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Lws-XN-RlX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7TN-ia-F8X"/>
+                <constraint firstItem="UMG-ja-S8v" firstAttribute="top" secondItem="od5-3I-ISH" secondAttribute="bottom" constant="64" id="96x-T2-itB"/>
+                <constraint firstItem="od5-3I-ISH" firstAttribute="top" secondItem="Lws-XN-RlX" secondAttribute="bottom" constant="8" id="AIH-2m-EXo"/>
+                <constraint firstItem="od5-3I-ISH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Luf-fY-LjK"/>
+                <constraint firstItem="70r-Rw-Pee" firstAttribute="top" secondItem="UMG-ja-S8v" secondAttribute="bottom" constant="8" id="QxX-ac-TAg"/>
+                <constraint firstItem="Lws-XN-RlX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="h2a-T4-che"/>
+                <constraint firstItem="70r-Rw-Pee" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nGF-cx-wem"/>
+                <constraint firstItem="UMG-ja-S8v" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qYx-i1-ix0"/>
+            </constraints>
+            <point key="canvasLocation" x="101" y="106"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home" width="300" height="274"/>
+    </resources>
+</document>

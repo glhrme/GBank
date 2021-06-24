@@ -11,6 +11,10 @@
 		11EBFC982683F2380012563C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EBFC962683F2380012563C /* LoginViewController.xib */; };
 		11EBFC9F2683FA000012563C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFC9D2683FA000012563C /* RegisterViewController.swift */; };
 		11EBFCA02683FA000012563C /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EBFC9E2683FA000012563C /* RegisterViewController.xib */; };
+		11EBFCA72683FC3D0012563C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFCA62683FC3D0012563C /* RegisterViewModel.swift */; };
+		11EBFCC32683FEC10012563C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFCC12683FEC10012563C /* WelcomeViewController.swift */; };
+		11EBFCC42683FEC10012563C /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EBFCC22683FEC10012563C /* WelcomeViewController.xib */; };
+		11EBFCCD268400440012563C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFCCC268400440012563C /* WelcomeViewModel.swift */; };
 		11ECC9E12683E9AA00C468F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECC9E02683E9AA00C468F3 /* AppDelegate.swift */; };
 		11ECC9E32683E9AA00C468F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECC9E22683E9AA00C468F3 /* SceneDelegate.swift */; };
 		11ECC9EB2683E9AA00C468F3 /* GBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11ECC9E92683E9AA00C468F3 /* GBank.xcdatamodeld */; };
@@ -44,6 +48,10 @@
 		11EBFC962683F2380012563C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		11EBFC9D2683FA000012563C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		11EBFC9E2683FA000012563C /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		11EBFCA62683FC3D0012563C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		11EBFCC12683FEC10012563C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		11EBFCC22683FEC10012563C /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		11EBFCCC268400440012563C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		11ECC9DD2683E9AA00C468F3 /* GBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11ECC9E02683E9AA00C468F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11ECC9E22683E9AA00C468F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +112,47 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		11EBFCA42683FC280012563C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11EBFCA52683FC2D0012563C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11EBFCA62683FC3D0012563C /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11EBFCBF2683FE990012563C /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				11EBFCCB268400390012563C /* ViewModel */,
+				11EBFCC02683FEB00012563C /* View */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		11EBFCC02683FEB00012563C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11EBFCC12683FEC10012563C /* WelcomeViewController.swift */,
+				11EBFCC22683FEC10012563C /* WelcomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11EBFCCB268400390012563C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11EBFCCC268400440012563C /* WelcomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		11ECC9D42683E9AA00C468F3 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +208,7 @@
 		11ECCA192683ECEA00C468F3 /* AppViews */ = {
 			isa = PBXGroup;
 			children = (
+				11EBFCBF2683FE990012563C /* Welcome */,
 				11ECCA1B2683ECF900C468F3 /* Register */,
 				11ECCA1A2683ECF200C468F3 /* Login */,
 			);
@@ -168,6 +218,7 @@
 		11ECCA1A2683ECF200C468F3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				11EBFCA42683FC280012563C /* ViewModel */,
 				11EBFC942683F21E0012563C /* View */,
 			);
 			path = Login;
@@ -176,6 +227,7 @@
 		11ECCA1B2683ECF900C468F3 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				11EBFCA52683FC2D0012563C /* ViewModel */,
 				11EBFC9C2683F9CC0012563C /* View */,
 			);
 			path = Register;
@@ -302,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EBFCC42683FEC10012563C /* WelcomeViewController.xib in Resources */,
 				11ECC9F02683E9AC00C468F3 /* LaunchScreen.storyboard in Resources */,
 				11ECC9ED2683E9AC00C468F3 /* Assets.xcassets in Resources */,
 				11EBFC982683F2380012563C /* LoginViewController.xib in Resources */,
@@ -330,9 +383,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EBFCC32683FEC10012563C /* WelcomeViewController.swift in Sources */,
+				11EBFCCD268400440012563C /* WelcomeViewModel.swift in Sources */,
 				11EBFC972683F2380012563C /* LoginViewController.swift in Sources */,
 				11ECCA222683EE4700C468F3 /* GSCoordinator.swift in Sources */,
 				11EBFC9F2683FA000012563C /* RegisterViewController.swift in Sources */,
+				11EBFCA72683FC3D0012563C /* RegisterViewModel.swift in Sources */,
 				11ECC9EB2683E9AA00C468F3 /* GBank.xcdatamodeld in Sources */,
 				11ECCA2A2683EE5400C468F3 /* AppCoordinator.swift in Sources */,
 				11ECC9E12683E9AA00C468F3 /* AppDelegate.swift in Sources */,

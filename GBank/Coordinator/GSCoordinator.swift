@@ -13,16 +13,40 @@ class GSCoordinator {
     
     var loginViewController: LoginViewController?
     
+    var registerViewController: RegisterViewController?
+    
+    var welcomeViewControler: WelcomeViewController?
+    var welcomeViewModel: WelcomeViewModel?
+    
     func start() -> UINavigationController {
-        let navigation = UINavigationController(rootViewController: getLogin())
+        let navigation = UINavigationController(rootViewController: getRoot())
         self.navigation = navigation
         return self.navigation ?? navigation
     }
     
     
-    func getLogin() -> UIViewController {
+    func getRoot() -> UIViewController {
+        let vc = WelcomeViewController()
+        let vm = WelcomeViewModel()
+        vm.delegate = self
+        self.welcomeViewModel = vm
+        vc.viewModel = self.welcomeViewModel ?? vm
+        self.welcomeViewControler = vc
+        return self.welcomeViewControler ?? vc
+    }
+}
+
+extension GSCoordinator: WelcomeViewModelDelegate {
+    func goLogin() {
         let vc = LoginViewController()
         self.loginViewController = vc
-        return vc
+        self.navigation?.pushViewController(self.loginViewController ?? vc, animated: true)
     }
+    
+    func goRegister() {
+        let vc = RegisterViewController()
+        self.registerViewController = vc
+        self.navigation?.pushViewController(self.registerViewController ?? vc, animated: true)
+    }
+    
 }
