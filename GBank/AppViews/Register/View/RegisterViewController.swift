@@ -9,6 +9,8 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    var viewModel: RegisterViewModel?
+    
     @IBOutlet weak var cpfTextField: UITextField!
     @IBOutlet weak var nomeTextField: UITextField!
     
@@ -22,6 +24,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func logarPressed(_ sender: UIButton) {
+        self.viewModel?.gotoLoginPage()
     }
     
     /*

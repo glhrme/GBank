@@ -14,6 +14,7 @@ class GSCoordinator {
     var loginViewController: LoginViewController?
     
     var registerViewController: RegisterViewController?
+    var registerViewModel: RegisterViewModel?
     
     var welcomeViewControler: WelcomeViewController?
     var welcomeViewModel: WelcomeViewModel?
@@ -45,8 +46,19 @@ extension GSCoordinator: WelcomeViewModelDelegate {
     
     func goRegister() {
         let vc = RegisterViewController()
+        let vm = RegisterViewModel()
+        vm.delegate = self
+        self.registerViewModel = vm
+        vc.viewModel = self.registerViewModel ?? vm
         self.registerViewController = vc
         self.navigation?.pushViewController(self.registerViewController ?? vc, animated: true)
     }
+}
+
+extension GSCoordinator: RegisterViewModelDelegate {
+    func goLoginPage() {
+        self.goLogin()
+    }
+    
     
 }
