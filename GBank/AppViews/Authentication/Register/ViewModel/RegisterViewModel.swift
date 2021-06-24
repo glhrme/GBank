@@ -9,6 +9,11 @@ import Foundation
 
 protocol RegisterViewModelDelegate: AnyObject {
     func goLoginPage()
+    func goHomePage(_ account: Account)
+}
+
+protocol RegisterDelegate: AnyObject {
+    func didAccountCreated(_ account: Account)
 }
 
 class RegisterViewModel {

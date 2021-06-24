@@ -19,6 +19,8 @@ class GSCoordinator {
     var welcomeViewControler: WelcomeViewController?
     var welcomeViewModel: WelcomeViewModel?
     
+    var homeViewController: HomeViewController?
+    
     func start() -> UINavigationController {
         let navigation = UINavigationController(rootViewController: getRoot())
         self.navigation = navigation
@@ -59,5 +61,9 @@ extension GSCoordinator: RegisterViewModelDelegate {
         self.goLogin()
     }
     
-    
+    func goHomePage(_ account: Account) {
+        let vc = HomeViewController()
+        self.homeViewController = vc
+        self.navigation?.pushViewController(self.homeViewController ?? vc, animated: true)
+    }
 }

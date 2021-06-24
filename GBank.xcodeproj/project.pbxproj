@@ -11,6 +11,8 @@
 		1161F97F26840D1800259F86 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F97E26840D1800259F86 /* Account.swift */; };
 		1161F98526840E5400259F86 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F98426840E5400259F86 /* RegisterService.swift */; };
 		1161F98B268412A200259F86 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F98A268412A200259F86 /* CreateAccount.swift */; };
+		1161F99726841F2100259F86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F99526841F2100259F86 /* HomeViewController.swift */; };
+		1161F99826841F2100259F86 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1161F99626841F2100259F86 /* HomeViewController.xib */; };
 		11EBFC972683F2380012563C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFC952683F2380012563C /* LoginViewController.swift */; };
 		11EBFC982683F2380012563C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EBFC962683F2380012563C /* LoginViewController.xib */; };
 		11EBFC9F2683FA000012563C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFC9D2683FA000012563C /* RegisterViewController.swift */; };
@@ -54,6 +56,8 @@
 		1161F97E26840D1800259F86 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		1161F98426840E5400259F86 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		1161F98A268412A200259F86 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		1161F99526841F2100259F86 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1161F99626841F2100259F86 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		11EBFC952683F2380012563C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		11EBFC962683F2380012563C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		11EBFC9D2683FA000012563C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,23 @@
 				1161F98A268412A200259F86 /* CreateAccount.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1161F99326841EEF00259F86 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1161F99426841EFE00259F86 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1161F99426841EFE00259F86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1161F99526841F2100259F86 /* HomeViewController.swift */,
+				1161F99626841F2100259F86 /* HomeViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		11EBFC942683F21E0012563C /* View */ = {
@@ -266,6 +287,7 @@
 		11ECCA192683ECEA00C468F3 /* AppViews */ = {
 			isa = PBXGroup;
 			children = (
+				1161F99326841EEF00259F86 /* Home */,
 				1161F97C26840D0000259F86 /* Authentication */,
 			);
 			path = AppViews;
@@ -445,6 +467,7 @@
 				11ECC9ED2683E9AC00C468F3 /* Assets.xcassets in Resources */,
 				11EBFC982683F2380012563C /* LoginViewController.xib in Resources */,
 				11EBFCA02683FA000012563C /* RegisterViewController.xib in Resources */,
+				1161F99826841F2100259F86 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +600,7 @@
 				11EBFCCD268400440012563C /* WelcomeViewModel.swift in Sources */,
 				11EBFC972683F2380012563C /* LoginViewController.swift in Sources */,
 				1161F98B268412A200259F86 /* CreateAccount.swift in Sources */,
+				1161F99726841F2100259F86 /* HomeViewController.swift in Sources */,
 				11ECCA222683EE4700C468F3 /* GSCoordinator.swift in Sources */,
 				11EBFC9F2683FA000012563C /* RegisterViewController.swift in Sources */,
 				1161F98526840E5400259F86 /* RegisterService.swift in Sources */,
