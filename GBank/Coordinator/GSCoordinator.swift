@@ -25,7 +25,6 @@ class GSCoordinator {
         return self.navigation ?? navigation
     }
     
-    
     func getRoot() -> UIViewController {
         let vc = WelcomeViewController()
         let vm = WelcomeViewModel()

@@ -14,6 +14,17 @@ protocol RegisterViewModelDelegate: AnyObject {
 class RegisterViewModel {
     weak var delegate: RegisterViewModelDelegate?
     
+    func createAccount(_ name: String, _ cpf: String) {
+        RegisterService().createAccount(name: name, cpf: cpf) { (result) in
+            switch result {
+            case .success(let account):
+                print(account)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     func gotoLoginPage() {
         self.delegate?.goLoginPage()
     }

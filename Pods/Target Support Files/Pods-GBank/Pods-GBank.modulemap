@@ -1,0 +1,6 @@
+framework module Pods_GBank {
+  umbrella header "Pods-GBank-umbrella.h"
+
+  export *
+  module * { export * }
+}

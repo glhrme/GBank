@@ -17,10 +17,12 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func criarContaPressed(_ sender: UIButton) {
+        if let name = self.nomeTextField.text, let cpf = self.cpfTextField.text {
+            self.viewModel?.createAccount(name, cpf)
+        }
     }
     
     @IBAction func logarPressed(_ sender: UIButton) {
