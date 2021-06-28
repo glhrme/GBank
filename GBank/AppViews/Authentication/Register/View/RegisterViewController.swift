@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.viewModel?.viewDelegate = self
     }
 
     @IBAction func criarContaPressed(_ sender: UIButton) {
@@ -38,5 +38,19 @@ class RegisterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension RegisterViewController: RegisterDelegate {
+    func didAccountCreated(_ account: Account) {
+        self.viewModel?.gotoHomePage(account)
+    }
+    
+    func didErrorAccountCreated(_ error: Error) {
+        let alert = UIAlertController(title: "Erro ao criar a conta", message: error.localizedDescription, preferredStyle: .alert)
+        let actionDefault = UIAlertAction(title: "Continuar", style: .default, handler: nil)
+        alert.addAction(actionDefault)
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }

@@ -14,23 +14,29 @@ protocol RegisterViewModelDelegate: AnyObject {
 
 protocol RegisterDelegate: AnyObject {
     func didAccountCreated(_ account: Account)
+    func didErrorAccountCreated(_ error: Error)
 }
 
 class RegisterViewModel {
     weak var delegate: RegisterViewModelDelegate?
+    weak var viewDelegate: RegisterDelegate?
     
     func createAccount(_ name: String, _ cpf: String) {
         RegisterService().createAccount(name: name, cpf: cpf) { (result) in
             switch result {
             case .success(let account):
-                print(account)
+                self.viewDelegate?.didAccountCreated(account)
             case .failure(let error):
-                print(error)
+                self.viewDelegate?.didErrorAccountCreated(error)
             }
         }
     }
     
     func gotoLoginPage() {
         self.delegate?.goLoginPage()
+    }
+    
+    func gotoHomePage(_ account: Account) {
+        self.delegate?.goHomePage(account)
     }
 }

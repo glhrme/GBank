@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00B52F69D2DB296B1A61F8D2 /* Pods_GBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41617BDC25EACC4B61B498CD /* Pods_GBank.framework */; };
 		1161F97F26840D1800259F86 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F97E26840D1800259F86 /* Account.swift */; };
 		1161F98526840E5400259F86 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F98426840E5400259F86 /* RegisterService.swift */; };
 		1161F98B268412A200259F86 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F98A268412A200259F86 /* CreateAccount.swift */; };
@@ -96,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B52F69D2DB296B1A61F8D2 /* Pods_GBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
