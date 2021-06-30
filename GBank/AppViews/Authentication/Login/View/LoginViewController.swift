@@ -9,15 +9,18 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var cpfTextField: UITextField!
+    var viewModel: LoginViewModel?
     
-
+    @IBOutlet weak var cpfTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func entrarPressed(_ sender: UIButton) {
+        if let cpf = cpfTextField.text {
+            self.viewModel?.makeLogin(cpf)
+        }
     }
 
 }

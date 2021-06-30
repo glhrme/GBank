@@ -12,6 +12,7 @@ class GSCoordinator {
     var navigation: UINavigationController?
     
     var loginViewController: LoginViewController?
+    var loginViewModel: LoginViewModel?
     
     var registerViewController: RegisterViewController?
     var registerViewModel: RegisterViewModel?
@@ -41,6 +42,10 @@ class GSCoordinator {
 extension GSCoordinator: WelcomeViewModelDelegate {
     func goLogin() {
         let vc = LoginViewController()
+        let vm = LoginViewModel()
+        vm.delegate = self
+        self.loginViewModel = vm
+        vc.viewModel = self.loginViewModel ?? vm
         self.loginViewController = vc
         self.navigation?.pushViewController(self.loginViewController ?? vc, animated: true)
     }
@@ -65,5 +70,11 @@ extension GSCoordinator: RegisterViewModelDelegate {
         let vc = HomeViewController()
         self.homeViewController = vc
         self.navigation?.pushViewController(self.homeViewController ?? vc, animated: true)
+    }
+}
+
+extension GSCoordinator: LoginViewModelDelegate {
+    func goHome(_ account: Account) {
+        self.goHomePage(account)
     }
 }

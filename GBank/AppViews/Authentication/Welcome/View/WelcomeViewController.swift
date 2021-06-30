@@ -13,6 +13,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Calendar.current.component(.hour, from: Date()))
     }
     
     override func viewWillAppear(_ animated: Bool) {

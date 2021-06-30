@@ -12,6 +12,8 @@
 		1161F98B268412A200259F86 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F98A268412A200259F86 /* CreateAccount.swift */; };
 		1161F99726841F2100259F86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F99526841F2100259F86 /* HomeViewController.swift */; };
 		1161F99826841F2100259F86 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1161F99626841F2100259F86 /* HomeViewController.xib */; };
+		11BD4601268C00F100C8CCF5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD4600268C00F100C8CCF5 /* LoginViewModel.swift */; };
+		11BD4607268C0B1800C8CCF5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD4606268C0B1800C8CCF5 /* LoginService.swift */; };
 		11EBFC972683F2380012563C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFC952683F2380012563C /* LoginViewController.swift */; };
 		11EBFC982683F2380012563C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EBFC962683F2380012563C /* LoginViewController.xib */; };
 		11EBFC9F2683FA000012563C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBFC9D2683FA000012563C /* RegisterViewController.swift */; };
@@ -57,6 +59,8 @@
 		1161F98A268412A200259F86 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		1161F99526841F2100259F86 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1161F99626841F2100259F86 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		11BD4600268C00F100C8CCF5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		11BD4606268C0B1800C8CCF5 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		11EBFC952683F2380012563C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		11EBFC962683F2380012563C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		11EBFC9D2683FA000012563C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +173,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		11BD4605268C0B1000C8CCF5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				11BD4606268C0B1800C8CCF5 /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		11EBFC942683F21E0012563C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +202,7 @@
 		11EBFCA42683FC280012563C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				11BD4600268C00F100C8CCF5 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -294,6 +307,7 @@
 		11ECCA1A2683ECF200C468F3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				11BD4605268C0B1000C8CCF5 /* Service */,
 				11EBFCA42683FC280012563C /* ViewModel */,
 				11EBFC942683F21E0012563C /* View */,
 			);
@@ -600,7 +614,9 @@
 				1161F98B268412A200259F86 /* CreateAccount.swift in Sources */,
 				1161F99726841F2100259F86 /* HomeViewController.swift in Sources */,
 				11ECCA222683EE4700C468F3 /* GSCoordinator.swift in Sources */,
+				11BD4607268C0B1800C8CCF5 /* LoginService.swift in Sources */,
 				11EBFC9F2683FA000012563C /* RegisterViewController.swift in Sources */,
+				11BD4601268C00F100C8CCF5 /* LoginViewModel.swift in Sources */,
 				1161F98526840E5400259F86 /* RegisterService.swift in Sources */,
 				11EBFCA72683FC3D0012563C /* RegisterViewModel.swift in Sources */,
 				11ECC9EB2683E9AA00C468F3 /* GBank.xcdatamodeld in Sources */,
