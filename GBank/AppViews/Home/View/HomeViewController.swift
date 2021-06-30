@@ -9,10 +9,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var account: Account?
+    
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.label.text = self.account?.cpf ?? ""
     }
 
 

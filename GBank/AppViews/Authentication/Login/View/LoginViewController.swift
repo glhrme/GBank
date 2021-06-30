@@ -36,6 +36,4 @@ extension LoginViewController: LoginDelegate {
         alert.addAction(UIAlertAction(title: "Continuar", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
 }

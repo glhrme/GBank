@@ -68,6 +68,7 @@ extension GSCoordinator: RegisterViewModelDelegate {
     
     func goHomePage(_ account: Account) {
         let vc = HomeViewController()
+        vc.account = account
         self.homeViewController = vc
         self.navigation?.pushViewController(self.homeViewController ?? vc, animated: true)
     }
