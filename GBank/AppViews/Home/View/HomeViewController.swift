@@ -11,11 +11,13 @@ class HomeViewController: UIViewController {
 
     var account: Account?
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var saldoLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.label.text = self.account?.cpf ?? ""
     }
 
 
