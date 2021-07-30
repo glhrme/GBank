@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111C219926B3A8C10047D68C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C219826B3A8C10047D68C /* HomeService.swift */; };
+		111C219F26B3A9470047D68C /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C219E26B3A9470047D68C /* Transfer.swift */; };
 		1155D6C0268D4C6000BE0AF4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155D6BE268D4C6000BE0AF4 /* CollectionViewCell.swift */; };
 		1155D6C1268D4C6000BE0AF4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1155D6BF268D4C6000BE0AF4 /* CollectionViewCell.xib */; };
 		1161F97F26840D1800259F86 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F97E26840D1800259F86 /* Account.swift */; };
@@ -56,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		09D74319183418B3CA86DD89 /* Pods-GBank-GBankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBank-GBankUITests.release.xcconfig"; path = "Target Support Files/Pods-GBank-GBankUITests/Pods-GBank-GBankUITests.release.xcconfig"; sourceTree = "<group>"; };
+		111C219826B3A8C10047D68C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		111C219E26B3A9470047D68C /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		1155D6BE268D4C6000BE0AF4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		1155D6BF268D4C6000BE0AF4 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		1161F97E26840D1800259F86 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -125,6 +129,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111C219326B3A83B0047D68C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		111C219426B3A8470047D68C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				111C219826B3A8C10047D68C /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		111C219D26B3A93B0047D68C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				111C219E26B3A9470047D68C /* Transfer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1155D6BC268D4C3F00BE0AF4 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +207,9 @@
 		1161F99326841EEF00259F86 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				111C219D26B3A93B0047D68C /* Model */,
+				111C219426B3A8470047D68C /* Service */,
+				111C219326B3A83B0047D68C /* ViewModel */,
 				1161F99426841EFE00259F86 /* View */,
 			);
 			path = Home;
@@ -634,8 +664,10 @@
 				1161F97F26840D1800259F86 /* Account.swift in Sources */,
 				1155D6C0268D4C6000BE0AF4 /* CollectionViewCell.swift in Sources */,
 				11EBFCCD268400440012563C /* WelcomeViewModel.swift in Sources */,
+				111C219F26B3A9470047D68C /* Transfer.swift in Sources */,
 				11EBFC972683F2380012563C /* LoginViewController.swift in Sources */,
 				1161F98B268412A200259F86 /* CreateAccount.swift in Sources */,
+				111C219926B3A8C10047D68C /* HomeService.swift in Sources */,
 				1161F99726841F2100259F86 /* HomeViewController.swift in Sources */,
 				11ECCA222683EE4700C468F3 /* GSCoordinator.swift in Sources */,
 				11BD4607268C0B1800C8CCF5 /* LoginService.swift in Sources */,

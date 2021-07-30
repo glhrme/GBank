@@ -33,10 +33,18 @@ class GSCoordinator {
         let vm = WelcomeViewModel()
         vm.delegate = self
         self.welcomeViewModel = vm
-        vc.viewModel = self.welcomeViewModel ?? vm
+        vc.viewModel = vm
         self.welcomeViewControler = vc
         return self.welcomeViewControler ?? vc
     }
+    
+//    func qualquerCanto() -> UITabBarController {
+//        let nav = UINavigationController(rootViewController: self.getRoot())
+//        let tabBar = UITabBarController()
+//        tabBar.viewControllers = [nav]
+//        return tabBar
+//    }
+    
 }
 
 extension GSCoordinator: WelcomeViewModelDelegate {
@@ -45,9 +53,9 @@ extension GSCoordinator: WelcomeViewModelDelegate {
         let vm = LoginViewModel()
         vm.delegate = self
         self.loginViewModel = vm
-        vc.viewModel = self.loginViewModel ?? vm
+        vc.viewModel = vm
         self.loginViewController = vc
-        self.navigation?.pushViewController(self.loginViewController ?? vc, animated: true)
+        self.navigation?.pushViewController(vc, animated: true)
     }
     
     func goRegister() {
@@ -55,9 +63,9 @@ extension GSCoordinator: WelcomeViewModelDelegate {
         let vm = RegisterViewModel()
         vm.delegate = self
         self.registerViewModel = vm
-        vc.viewModel = self.registerViewModel ?? vm
+        vc.viewModel = vm
         self.registerViewController = vc
-        self.navigation?.pushViewController(self.registerViewController ?? vc, animated: true)
+        self.navigation?.pushViewController(vc, animated: true)
     }
 }
 
@@ -65,17 +73,13 @@ extension GSCoordinator: RegisterViewModelDelegate {
     func goLoginPage() {
         self.goLogin()
     }
-    
-    func goHomePage(_ account: Account) {
-        let vc = HomeViewController()
-        vc.account = account
-        self.homeViewController = vc
-        self.navigation?.pushViewController(self.homeViewController ?? vc, animated: true)
-    }
 }
 
 extension GSCoordinator: LoginViewModelDelegate {
     func goHome(_ account: Account) {
-        self.goHomePage(account)
+        let vc = HomeViewController()
+        vc.account = account
+        self.homeViewController = vc
+        self.navigation?.pushViewController(vc, animated: true)
     }
 }

@@ -7,9 +7,8 @@
 
 import Foundation
 
-protocol RegisterViewModelDelegate: AnyObject {
+protocol RegisterViewModelDelegate: LoginViewModelDelegate {
     func goLoginPage()
-    func goHomePage(_ account: Account)
 }
 
 protocol RegisterDelegate: AnyObject {
@@ -37,6 +36,6 @@ class RegisterViewModel {
     }
     
     func gotoHomePage(_ account: Account) {
-        self.delegate?.goHomePage(account)
+        self.delegate?.goHome(account)
     }
 }
