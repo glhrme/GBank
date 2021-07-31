@@ -10,6 +10,8 @@
 		111C219926B3A8C10047D68C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C219826B3A8C10047D68C /* HomeService.swift */; };
 		111C219F26B3A9470047D68C /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C219E26B3A9470047D68C /* Transfer.swift */; };
 		111C21A426B4D1960047D68C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C21A326B4D1960047D68C /* HomeViewModel.swift */; };
+		111D71EF26B5121200CC3AC7 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111D71ED26B5121200CC3AC7 /* TransactionTableViewCell.swift */; };
+		111D71F026B5121200CC3AC7 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 111D71EE26B5121200CC3AC7 /* TransactionTableViewCell.xib */; };
 		1155D6C0268D4C6000BE0AF4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155D6BE268D4C6000BE0AF4 /* CollectionViewCell.swift */; };
 		1155D6C1268D4C6000BE0AF4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1155D6BF268D4C6000BE0AF4 /* CollectionViewCell.xib */; };
 		1161F97F26840D1800259F86 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F97E26840D1800259F86 /* Account.swift */; };
@@ -62,6 +64,8 @@
 		111C219826B3A8C10047D68C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		111C219E26B3A9470047D68C /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		111C21A326B4D1960047D68C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		111D71ED26B5121200CC3AC7 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		111D71EE26B5121200CC3AC7 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		1155D6BE268D4C6000BE0AF4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		1155D6BF268D4C6000BE0AF4 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		1161F97E26840D1800259F86 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -155,11 +159,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		111D71D926B4DCA500CC3AC7 /* ListView */ = {
+		111D71D926B4DCA500CC3AC7 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				111D71ED26B5121200CC3AC7 /* TransactionTableViewCell.swift */,
+				111D71EE26B5121200CC3AC7 /* TransactionTableViewCell.xib */,
 			);
-			path = ListView;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		1155D6BC268D4C3F00BE0AF4 /* CollectionViewCell */ = {
@@ -228,7 +234,7 @@
 		1161F99426841EFE00259F86 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				111D71D926B4DCA500CC3AC7 /* ListView */,
+				111D71D926B4DCA500CC3AC7 /* TableViewCell */,
 				1155D6BC268D4C3F00BE0AF4 /* CollectionViewCell */,
 				1161F99526841F2100259F86 /* HomeViewController.swift */,
 				1161F99626841F2100259F86 /* HomeViewController.xib */,
@@ -543,6 +549,7 @@
 				11ECC9ED2683E9AC00C468F3 /* Assets.xcassets in Resources */,
 				11EBFC982683F2380012563C /* LoginViewController.xib in Resources */,
 				11EBFCA02683FA000012563C /* RegisterViewController.xib in Resources */,
+				111D71F026B5121200CC3AC7 /* TransactionTableViewCell.xib in Resources */,
 				1161F99826841F2100259F86 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EBFCC32683FEC10012563C /* WelcomeViewController.swift in Sources */,
+				111D71EF26B5121200CC3AC7 /* TransactionTableViewCell.swift in Sources */,
 				1161F97F26840D1800259F86 /* Account.swift in Sources */,
 				1155D6C0268D4C6000BE0AF4 /* CollectionViewCell.swift in Sources */,
 				111C21A426B4D1960047D68C /* HomeViewModel.swift in Sources */,
