@@ -22,16 +22,25 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.identifierCollectionView)
-        self.tableView.register(UINib(nibName: "TransactionTableViewCell", bundle: nil), forCellReuseIdentifier: self.identifierTableViewCell)
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.setupCollectionView()
+        self.setupTableView()
         self.viewModel?.viewDelegate = self
         if let cpf = self.account?.id {
             self.viewModel?.getTransations(cpf)
+            self.viewModel?.getProfile(cpf)
         }
+    }
+    
+    func setupTableView() {
+        self.tableView.register(UINib(nibName: "TransactionTableViewCell", bundle: nil), forCellReuseIdentifier: self.identifierTableViewCell)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
+    func setupCollectionView() {
+        self.collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.identifierCollectionView)
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
     }
 
 }
@@ -62,8 +71,14 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension HomeViewController: HomeViewDelegate {
+    func updateProfile(_ profile: Account) {
+        self.welcomeLabel.text = "Bem vindo, \(profile.name)"
+        self.saldoLabel.text = "\(profile.balance)"
+    }
+    
     func listTransations(_ transactions: [Transfer]) {
         self.transactions = transactions
         self.tableView.reloadData()
     }
+    
 }

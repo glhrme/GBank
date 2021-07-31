@@ -9,10 +9,10 @@ import Foundation
 import Alamofire
 
 class HomeService {
-    let endpoint = "http://localhost:3001/v1/transfers"
+    let endpoint = "http://localhost:3001/v1"
     
     func listTransfers(handler: @escaping (_ result: Result<[Transfer], Error>) -> Void) {
-        AF.request(endpoint, method: .get).responseData { (response) in
+        AF.request("\(endpoint)/transfers", method: .get).responseData { (response) in
             
             switch response.result {
             case .success(let data):
@@ -24,6 +24,31 @@ class HomeService {
                     handler(.failure(error))
                 }
             }
+        }
+    }
+    
+    func getProfile(handler: @escaping (_ result: Result<[Account], Error>) -> Void) {
+        AF.request("\(endpoint)/accounts", method: .get).responseData { (response) in
+            switch response.result {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    handler(self.parseAccount(data: data))
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    handler(.failure(error))
+                }
+            }
+        }
+    }
+    
+    private func parseAccount(data: Data) -> Result<[Account], Error> {
+        let decoder = JSONDecoder()
+        do {
+            let account = try decoder.decode([Account].self, from: data)
+            return .success(account)
+        } catch {
+            return .failure(error)
         }
     }
     

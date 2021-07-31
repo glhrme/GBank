@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomeViewDelegate: AnyObject {
     func listTransations(_ transactions: [Transfer]) -> Void
+    func updateProfile(_ profile: Account) -> Void
 }
 
 protocol HomeViewModelDelegate: AnyObject {
@@ -31,10 +32,28 @@ class HomeViewModel {
         }
     }
     
+    func getProfile(_ id: String) {
+        self.service.getProfile { (response) in
+            switch response {
+            case .success(let accounts):
+                self.viewDelegate?.updateProfile(self.filterAccount(id, accounts))
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     private func filterTransactions(_ cpf: String, _ transactions: [Transfer]) -> [Transfer] {
         let filtered = transactions.filter { transaction in
             return transaction.account_origin_id == cpf
         }
         return filtered
+    }
+    
+    private func filterAccount(_ id: String, _ accounts: [Account]) -> Account {
+        let account = accounts.filter { (account) -> Bool in
+            return account.id == id
+        }
+        return account[0]
     }
 }
