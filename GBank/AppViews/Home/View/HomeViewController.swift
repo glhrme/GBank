@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     var account: Account?
+    weak var viewModel: HomeViewModel?
     let identifierCollectionView = "identifierFilhao"
     
     @IBOutlet weak var welcomeLabel: UILabel!
@@ -22,6 +23,10 @@ class HomeViewController: UIViewController {
         self.collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.identifierCollectionView)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        self.viewModel?.viewDelegate = self
+        if let cpf = self.account?.id {
+            self.viewModel?.getTransations(cpf)
+        }
     }
 
 }
@@ -35,6 +40,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: self.identifierCollectionView, for: indexPath) as! CollectionViewCell
         return cell
     }
-    
-    
+}
+
+extension HomeViewController: HomeViewDelegate {
+    func listTransations(_ transactions: [Transfer]) {
+        
+    }
 }

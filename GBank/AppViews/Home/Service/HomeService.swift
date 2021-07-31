@@ -13,11 +13,16 @@ class HomeService {
     
     func listTransfers(handler: @escaping (_ result: Result<[Transfer], Error>) -> Void) {
         AF.request(endpoint, method: .get).responseData { (response) in
+            
             switch response.result {
             case .success(let data):
-                handler(self.parseTransfers(data: data))
+                DispatchQueue.main.async {
+                    handler(self.parseTransfers(data: data))
+                }
             case .failure(let error):
-                handler(.failure(error))
+                DispatchQueue.main.async {
+                    handler(.failure(error))
+                }
             }
         }
     }

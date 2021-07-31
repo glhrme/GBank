@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		111C219926B3A8C10047D68C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C219826B3A8C10047D68C /* HomeService.swift */; };
 		111C219F26B3A9470047D68C /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C219E26B3A9470047D68C /* Transfer.swift */; };
+		111C21A426B4D1960047D68C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C21A326B4D1960047D68C /* HomeViewModel.swift */; };
 		1155D6C0268D4C6000BE0AF4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155D6BE268D4C6000BE0AF4 /* CollectionViewCell.swift */; };
 		1155D6C1268D4C6000BE0AF4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1155D6BF268D4C6000BE0AF4 /* CollectionViewCell.xib */; };
 		1161F97F26840D1800259F86 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F97E26840D1800259F86 /* Account.swift */; };
@@ -60,6 +61,7 @@
 		09D74319183418B3CA86DD89 /* Pods-GBank-GBankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBank-GBankUITests.release.xcconfig"; path = "Target Support Files/Pods-GBank-GBankUITests/Pods-GBank-GBankUITests.release.xcconfig"; sourceTree = "<group>"; };
 		111C219826B3A8C10047D68C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		111C219E26B3A9470047D68C /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		111C21A326B4D1960047D68C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1155D6BE268D4C6000BE0AF4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		1155D6BF268D4C6000BE0AF4 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		1161F97E26840D1800259F86 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		111C219326B3A83B0047D68C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				111C21A326B4D1960047D68C /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,6 +153,13 @@
 				111C219E26B3A9470047D68C /* Transfer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		111D71D926B4DCA500CC3AC7 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ListView;
 			sourceTree = "<group>";
 		};
 		1155D6BC268D4C3F00BE0AF4 /* CollectionViewCell */ = {
@@ -218,6 +228,7 @@
 		1161F99426841EFE00259F86 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				111D71D926B4DCA500CC3AC7 /* ListView */,
 				1155D6BC268D4C3F00BE0AF4 /* CollectionViewCell */,
 				1161F99526841F2100259F86 /* HomeViewController.swift */,
 				1161F99626841F2100259F86 /* HomeViewController.xib */,
@@ -663,6 +674,7 @@
 				11EBFCC32683FEC10012563C /* WelcomeViewController.swift in Sources */,
 				1161F97F26840D1800259F86 /* Account.swift in Sources */,
 				1155D6C0268D4C6000BE0AF4 /* CollectionViewCell.swift in Sources */,
+				111C21A426B4D1960047D68C /* HomeViewModel.swift in Sources */,
 				11EBFCCD268400440012563C /* WelcomeViewModel.swift in Sources */,
 				111C219F26B3A9470047D68C /* Transfer.swift in Sources */,
 				11EBFC972683F2380012563C /* LoginViewController.swift in Sources */,
